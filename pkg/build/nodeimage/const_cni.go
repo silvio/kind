@@ -115,7 +115,7 @@ spec:
           mountPath: /run/xtables.lock
           readOnly: false
         - name: lib-modules
-          mountPath: /lib/modules
+          mountPath: /vendor/lib/modules
           readOnly: true
         resources:
           requests:
@@ -138,6 +138,6 @@ spec:
           type: FileOrCreate
       - name: lib-modules
         hostPath:
-          path: /lib/modules
+          path: /vendor/lib/modules
 ---
 `

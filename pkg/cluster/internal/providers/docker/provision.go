@@ -220,7 +220,7 @@ func runArgsForNode(node *config.Node, clusterIPFamily config.ClusterIPFamily, n
 		// (please don't depend on doing this though!)
 		"--volume", "/var",
 		// some k8s things want to read /lib/modules
-		"--volume", "/lib/modules:/lib/modules:ro",
+		"--volume", "/vendor/lib/modules:/lib/modules:ro",
 		// propagate KIND_EXPERIMENTAL_CONTAINERD_SNAPSHOTTER to the entrypoint script
 		"-e", "KIND_EXPERIMENTAL_CONTAINERD_SNAPSHOTTER",
 		// enable /dev/fuse explicitly for fuse-overlayfs
