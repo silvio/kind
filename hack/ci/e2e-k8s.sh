@@ -74,7 +74,7 @@ check_structured_log_support() {
 # up a cluster with kind
 create_cluster() {
   # Grab the version of the cluster we're about to start
-  KUBE_VERSION="$(docker run --rm --entrypoint=cat "kindest/node:latest" /kind/version)"
+  KUBE_VERSION="$(sudo docker run --rm --entrypoint=cat "kindest/node:latest" /kind/version)"
 
   # Default Log level for all components in test clusters
   KIND_CLUSTER_LOG_LEVEL=${KIND_CLUSTER_LOG_LEVEL:-4}
